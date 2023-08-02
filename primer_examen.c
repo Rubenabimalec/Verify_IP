@@ -48,8 +48,38 @@ int contador(int num)
     }
     return count_digit;
 }
+void sumale(int posicion, int suma, char arreglo[], int elementos)
+{
+    // Asegurarnos de que la posición sea válida
+    if (posicion < 0 || posicion >= elementos)
+    {
+        printf("La posision no es validA\n");
+        return;
+    }
+    // Sumar el valor a la posición indicada
+    arreglo[posicion] = arreglo[posicion] + suma;
+
+    for (int i = posicion; i >= 0; i--)
+    {
+        if (arreglo[i] > 9)
+        {
+            arreglo[i] = arreglo[i] % 10;
+            if (i - 1 >= 0)
+            {
+                arreglo[i - 1] = arreglo[i - 1] + 1;
+            }
+            else
+            {
+                printf("Recorrimiento hacia la izquierda del número resultante.\n");
+            }
+        }
+        break;
+    }
+}
 int main()
 {
+    int posicion = 2;
+    int suma = 5;
     int num = 0;
     printf("ingrese el numero: ");
     scanf("%d", &num);
@@ -65,9 +95,28 @@ int main()
     printf("el arreglo es: [");
     for (int i = 0; i < elementos - 1; i++)
     {
-        printf("%c, ", numeros[i]);
+        printf("%c", numeros[i]);
+        if (i < elementos - 1)
+        {
+            printf(", ");
+        }
     }
     printf("%c]\n", numeros[elementos - 1]);
+
+    // mandamos a hacer la suma en el arreglo
+    sumale(posicion, suma, numeros, elementos);
+
+    // imprime el arreglo ya sumado
+    printf("Arreglo con la suma realizada: [");
+    for (int i = 0; i < elementos; i++)
+    {
+        printf("%d", numeros[i]);
+        if (i < elementos - 1)
+        {
+            printf(", ");
+        }
+    }
+    printf("]\n");
     return 0;
 }
 
