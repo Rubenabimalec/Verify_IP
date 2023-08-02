@@ -70,3 +70,12 @@ int main()
     printf("%c]\n", numeros[elementos - 1]);
     return 0;
 }
+
+/**referencias
+ -Binary Man. (2021, 1 octubre). Programación en C: STRINGS | Como almacenar cadenas de caracteres [Vídeo]. YouTube. https://www.youtube.com/watch?v=pJHNYeAKogA
+ -Hayde, H. (s. f.). Ciencias computacionales Propedéutico: Programación. Recuperado 1 de agosto de 2023, de https://posgrados.inaoep.mx/archivos/PosCsComputacionales/Curso_Propedeutico/Programacion_Estructuras_Datos/Capitulo_3_Apuntadores.pdf#page7
+ -KERNIGHAN, B., [BRIAN W. KERNIGHAN], & RITCHIE, D., [DENNIS M. RITCHIE]. (1991). EL LENGUAJE DE PROGRAMACION C (2.a ed.). PRENTICE-HALL HISPANOAMERICANA, S.A.
+ -makigas: aprende a programar. (2023, 4 abril). Cómo convertir char a número en C [Vídeo]. YouTube. https://www.youtube.com/watch?v=HxnaGER_lXI
+ -Peter. (s. f.). Codigo ASCII 0 , Número cero, tabla con los codigos ASCII completos, caracteres simbolos letras numero, cero, 0,ascii,48, ascii codigo, tabla ascii, codigos ascii, caracteres ascii, codigos, tabla, caracteres, simbolos, control, imprimibles, extendido, letras, vocales, signos, simbolos, mayusculas, minusculas, alt, teclas, acentos, agudo, grave, eñe, enie, arroba, dieresis, circunflejo, tilde, cedilla, anillo, libra, esterlina, centavo, teclado, tipear, escribir, español, ingles, notebook, laptop, asccii, asqui, askii, aski,20230801. Codigo ASCII 0 , Número cero. https://elcodigoascii.com.ar/codigos-ascii/numero-cero-0-codigo-ascii-48.html
+
+*/
