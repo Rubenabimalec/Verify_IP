@@ -58,33 +58,38 @@ void sumale(int posicion, int suma, char arreglo[], int elementos)
     }
     // Sumar el valor a la posición indicada
     arreglo[posicion] = arreglo[posicion] + suma;
-
-    for (int i = posicion; i >= 0; i--)
+    if (arreglo[posicion] > 9)
     {
-        if (arreglo[i] > 9)
+        int num_unidad = arreglo[posicion] / 10;
+        int num_decena = arreglo[posicion] % 10;
+        arreglo[posicion] = num_unidad; // Guardamos solo el dígito de las unidades
+        for (int i = posicion; i == posicion + 1; i++)
         {
-            arreglo[i] = arreglo[i] % 10;
-            if (i - 1 >= 0)
+            if (num_unidad == 0)
             {
-                arreglo[i - 1] = arreglo[i - 1] + 1;
+                break;
             }
-            else
-            {
-                printf("Recorrimiento hacia la izquierda del número resultante.\n");
-            }
+            // agrega un caracter al arreglo cuando el numero es mayor a 9
+            arreglo[i + 1] = num_decena;
         }
-        break;
     }
 }
+
 int main()
 {
-    int posicion = 2;
+    int posicion = 3;
     int suma = 5;
     int num = 0;
     printf("ingrese el numero: ");
     scanf("%d", &num);
     // numero de digitos en el numero dado
     char elementos = contador(num);
+    if (elementos <= 0)
+    {
+        printf("No ingreso ningun numero");
+        return 0;
+    }
+
     printf("elemento: %d \n", elementos);
     // mas uno representa el valor nulo al final del arreglo de elementos, el final de la linea
     char numeros[elementos + 1];
@@ -108,15 +113,15 @@ int main()
 
     // imprime el arreglo ya sumado
     printf("Arreglo con la suma realizada: [");
-    for (int i = 0; i < elementos; i++)
+    for (int i = 0; i < elementos - 1; i++)
     {
-        printf("%d", numeros[i]);
+        printf("%c", numeros[i]);
         if (i < elementos - 1)
         {
             printf(", ");
         }
     }
-    printf("]\n");
+    printf("%c]\n", numeros[elementos - 1]);
     return 0;
 }
 
