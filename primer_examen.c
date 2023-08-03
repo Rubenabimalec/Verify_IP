@@ -14,12 +14,17 @@ de entrada, el arreglo de numeros, la longitud del arreglo y el numero que se in
 mediante un ciclo for se llena el arreglo a la inversa con la conversion de tipo ASCII teniendo como
 resultado en cada iteracion un digito.
 Al funal solo se hace la imagen del arreglo al imprimir desde la funcion principal
-
+funciona de la siguiente manera:
+ingrese el numero: 1235
+arroja: elemento: 4
+arroja: el arreglo es: [1, 2, 3, 5]
+arroja: Arreglo con la suma realizada: [1, 2, 8, 5]
 
 
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 void convierte_arr(int num, char *numeros, int longit)
 {
     numeros[longit] = '\0';
@@ -58,26 +63,12 @@ void sumale(int posicion, int suma, char arreglo[], int elementos)
     }
     // Sumar el valor a la posición indicada
     arreglo[posicion] = arreglo[posicion] + suma;
-    if (arreglo[posicion] > 9)
-    {
-        int num_unidad = arreglo[posicion] / 10;
-        int num_decena = arreglo[posicion] % 10;
-        arreglo[posicion] = num_unidad; // Guardamos solo el dígito de las unidades
-        for (int i = posicion; i == posicion + 1; i++)
-        {
-            if (num_unidad == 0)
-            {
-                break;
-            }
-            // agrega un caracter al arreglo cuando el numero es mayor a 9
-            arreglo[i + 1] = num_decena;
-        }
-    }
+    // if (arreglo[posicion] > 9)
 }
 
 int main()
 {
-    int posicion = 3;
+    int posicion = 2;
     int suma = 5;
     int num = 0;
     printf("ingrese el numero: ");
