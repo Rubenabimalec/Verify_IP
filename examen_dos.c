@@ -34,6 +34,15 @@ int main()
 {
     int vector[] = {0, 1, 1, 2, 3, 5, 8, 13, 21, 33, 54, 7, -1};
     int N = 8;
+    int i = 0;
+    printf("Arreglo original: [");
+    while (vector[i] != -1)
+    {
+        printf("%d, ", vector[i]);
+        i++;
+    }
+    printf("\b\b]\n"); // Eliminamos la última coma y espacio antes del corchete final
+
     printf("Combinaciones que suman %d:\n", N);
     SumaFinder(N, vector);
 
