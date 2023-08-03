@@ -41,7 +41,7 @@ int main()
         printf("%d, ", vector[i]);
         i++;
     }
-    printf("\b\b]\n"); // Eliminamos la última coma y espacio antes del corchete final
+    printf("\b\b]\n"); // Eliminamos la ultima coma y espacio antes del corchete final
 
     printf("Combinaciones que suman %d:\n", N);
     SumaFinder(N, vector);
