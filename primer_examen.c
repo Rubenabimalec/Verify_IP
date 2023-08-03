@@ -15,6 +15,8 @@ mediante un ciclo for se llena el arreglo a la inversa con la conversion de tipo
 resultado en cada iteracion un digito.
 Al funal solo se hace la imagen del arreglo al imprimir desde la funcion principal
 funciona de la siguiente manera:
+posicionde:2
+suma:5
 ingrese el numero: 1235
 arroja: elemento: 4
 arroja: el arreglo es: [1, 2, 3, 5]
