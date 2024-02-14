@@ -1,3 +1,9 @@
 # Verify_IP
-El repositorio contiene el código en el cual se verifican los IP que ingresan los usuarios en el cual se toman en cuanta las restricciones que tiene un IP como lo son: no mas de 16 caracteres, que los números estén entre 0 y 255, también que los usuarios no puedan introducir caracteres tipo letra o por otro lado que no sean mas de 3 puntos.
-El archivo de combinaciones genera el numero de combinaciones que se puedan generar las subredes que se pueden generar en funcion de los bits le asignemos.
+
+El repositorio alberga el código encargado de verificar las direcciones IP ingresadas por los usuarios, teniendo en cuenta las restricciones específicas de dichas direcciones. Estas restricciones incluyen:
+
+Longitud máxima de 16 caracteres.
+Rango de números permitidos entre 0 y 255.
+Prohibición de caracteres no numéricos.
+Limitación a un máximo de 3 puntos en la dirección IP.
+Además, el archivo de combinaciones calcula el número de combinaciones posibles para las subredes en función de los bits asignados.
